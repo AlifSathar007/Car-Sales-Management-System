@@ -1,0 +1,695 @@
+#include <stdio.h>
+
+int main () {
+
+    char CarNames[][50] = {"AudiR8", "AlfaRomeo", "BmwM5", "Porsche992GT3RS", "LamborghiniF90"};
+    float CarPrices[] = {100000, 200000, 300000, 400000, 500000};
+    int CarStock[] = {1, 2, 3, 4, 5};
+
+
+
+    int AudiPrice = 100000;
+    int AlfaPrice = 200000;
+    int BmwPrice = 300000;
+    int PorschePrice = 400000;
+    int LamborghiniPrice = 500000;
+
+    // this represents the number of stocks available of these particular Car brands
+
+    int StockOfAudi = 20;
+    int StockOfAlfa = 20;
+    int StockOfBmw = 20;
+    int StockOfPorsche = 20;
+    int StockOfLamborghini = 20;
+
+    // stocks of car available
+
+    int AudiR8 = 1;
+    int AlfaRomeo = 2;
+    int BmwM5 = 3;
+    int Porsche992GT3RS = 4;
+    int LamborghiniF90 = 5;
+
+    // Details of the Customer
+
+    char CustomerName[100];
+    short age;
+    long long Mnumber;
+    char Feedback[100];
+
+
+    char CarSelection;
+    // Introduction
+    // I'm using the dealership name as Auto Trader because it is the first name that came to my mind and the name suits very well for the car sales project.
+    // The Auto trader is a real world company that exits and I hope there won't be any copyright or any problem.
+    printf("####### Hello Welcome to Auto Trader Dealership #######\n\n");
+    printf("We are here to help you buy your first car...\n");
+    printf("Despite selling cars, we also provide various services that makes your purchase and ownership easier:\n\n");
+
+    int ReasonToVisit;
+    one:
+
+    printf("  # Press 1 to know about Auto Trader and our various services\n");
+    printf("  # Press 2 to find out about the various models of cars we sell and to lent\n");
+    printf("  # Press 3 to exit to the main menu\n");
+    printf("  # Press 4 to check the stocks and price of each car available right now at Auto Trader Dealership\n");
+    printf("  # Press 5 to buy your new car\n");
+    printf("  # Press 6 to to give a customer feedback.\n\n");
+    scanf("%d", &ReasonToVisit);
+
+    switch (ReasonToVisit) {
+
+
+        case 1:
+            printf("### Auto Trader is UK's largest automotive marketplace in Uk ###");
+            printf("### We feature more than 450,000 cars on any given day, giving you access to over 80 percentage of the UK's automotive retailers in one place.\n");
+            printf("### We also have a dedicated youtube channel showcasing reviews of various car models and website providing information about upcoming news in the automotive world\n");
+
+            int goToOne;
+            printf(" ####### To go to main menu Press '1' or to exit press '2'.\n");
+            scanf("%d", &goToOne);
+
+            switch (goToOne) {
+                case 2:
+                    printf("Thanks for visiting Auto Trader Car Dealership.\n\n");
+                    printf(" ####### Feel free to come again and be sure to check our website for upcoming offers and sales on new cars ########\n");
+                    break;
+
+                case 1:
+                    goto one;
+                    break;
+                default:
+                    printf("Invalid Choice\n");
+                    goto one;
+
+
+            }
+            break; // break for case one
+
+        case 2:
+        two :
+            printf(" ####### We have some exclusive vehicles that are worth buying #######\n\n");
+            printf(" 1- Audi R8\n");
+            printf(" 2- Alfa Romeo\n");
+            printf(" 3- BmwM5\n");
+            printf(" 4- Porsche992GT3RS\n");
+            printf(" 5- LamborghiniF90\n\n\n");
+
+            int DreamCar;
+            printf("If you want to know more about the car type the number of your desired dream car\n");
+            scanf("%d", &DreamCar);
+            // this switch will provide details about the car
+
+            switch (DreamCar) {
+
+                case 1:
+                    printf(" ######## AudiR8 #######\n\n");
+                    printf(" * The OnRoad price of the car is %dGBP\n", AudiPrice);
+                    printf(" * The manufacturing year of Audi is 2022\n");
+                    printf(" * The car has a top speed of 331 km/h or 205.7 m/h. \n");
+                    printf(" * The car has a maximum horsepower at 427 Bhp.\n");
+                    printf(" * The car has a max torque of 580 Nm.\n");
+                    printf(" * The car has a max acceleration of 0 - 100km/h or 0 - 62.1 m/h in 3.1 seconds.\n");
+                    printf(" * The current stock of this car is %d\n\n\n\n", StockOfAudi);
+
+                    int goToTwo;
+                    printf(" ### To find out more details about other cars press '1' , to exit press '2' or to go to the main menu press '3' ###.\n");
+                    scanf("%d", &goToTwo);
+
+                    switch (goToTwo) {
+                        case 2:
+                            printf("Thanks for visiting Auto Trader Car Dealership.\n\n");
+                            printf(" ####### Feel free to come again and be sure to check our website for upcoming offers and sales on new cars ########\n");
+                            break;
+
+                        case 1:
+                            goto two;
+                            break;
+                        case 3:
+                            goto one;
+                        default:
+                            printf("Invalid Choice\n");
+                            goto two;
+
+
+                    }
+                    break;
+
+
+                case 2 :
+                    printf(" ####### Alfa Romeo #######\n\n");
+                    printf(" * The OnRoad Price of this car is %dGBP\n", AlfaPrice);
+                    printf(" * The manufacturing year of AlfaRomeo is 2022\n");
+                    printf(" * The car has a top speed of 300 km/h or 186 m/h. \n");
+                    printf(" * The car has a maximum horsepower at 183BHp.\n");
+                    printf(" * The car has a max torque at 338Nm.\n");
+                    printf(" * The car has a maximum acceleration of 0 -100km/h in 3.8 seconds or 0 - 60m/h in 3.3 seconds.\n");
+                    printf(" * The current stock of this car is %d\n\n\n\n", StockOfAlfa);
+
+                    printf(" ### To find out more details about other cars press '1' , to exit press '2' or to go to the main menu press '3' ###.\n");
+                    scanf("%d", &goToTwo);
+
+                    switch (goToTwo) {
+                        case 2:
+                            printf("Thanks for visiting Auto Trader Car Dealership.\n\n");
+                            printf(" ####### Feel free to come again and be sure to check our website for upcoming offers and sales on new cars ########\n");
+                            break;
+
+                        case 1:
+                            goto two;
+                            break;
+                        case 3:
+                            goto one;
+                        default:
+                            printf("Invalid Choice\n");
+                            goto two;
+
+
+                    }
+                    break; //break of case two of switch two
+
+//case 3 of second switch
+
+                case 3:
+                    printf(" ####### BmwM5 #######\n\n");
+                    printf(" * The OnRoad Price of this car is %dGBP\n", BmwPrice);
+                    printf(" * The Manufacturing year of Bmw is 2020\n");
+                    printf(" * The car has a top speed of 290 km/h or 250 m/h\n");
+                    printf(" * The car has a maximum horsepower at 200 BHp.\n");
+                    printf(" * The car has a maximum torque at 250 Nm.\n");
+                    printf(" * The car has a maximum acceleration of 0 - 100 km/h in 2.5 seconds or 0 - 60 m/h in 3 seconds.\n");
+                    printf(" * The current stock of this car is %d\n\n\n\n", StockOfBmw);
+
+                    printf(" ### To find out more details about other cars press '1' , to exit press '2' or to go to the main menu press '3' ###.\n");
+                    scanf("%d", &goToTwo);
+
+                    switch (goToTwo) {
+                        case 2:
+                            printf("Thanks for visiting Auto Trader Car Dealership.\n\n");
+                            printf(" ####### Feel free to come again and be sure to check our website for upcoming offers and sales on new cars ########\n");
+                            break;
+
+                        case 1:
+                            goto two;
+                            break;
+                        case 3:
+                            goto one;
+                        default:
+                            printf("Invalid Choice\n");
+                            goto two;
+
+
+                    }
+                    break;
+
+// case 4 of second switch
+
+                case 4:
+                    printf(" ####### Porsche992GT3RS #######\n\n");
+                    printf(" * The OnRoad price of this car is %dGBP\n", PorschePrice);
+                    printf(" * The Manufacturing year of Porsche is 2023\n");
+                    printf(" * The car has a top speed of 310 km/h or 290 m/h\n");
+                    printf(" * The car has a maximum horsepower of 300 BHp.\n");
+                    printf(" * The car has a maximum torque at 350 Nm.\n");
+                    printf(" * The car has a maximum acceleration of 0 - 100 km/h in 2.4 seconds or 0 - 60 m/h in 2.6 seconds.\n");
+                    printf(" * The current stock of this car is %d\n\n\n\n", StockOfPorsche);
+
+                    printf(" ### To find out more details about other cars press '1' , to exit press '2' or to go to the main menu press '3' ###.\n");
+                    scanf("%d", &goToTwo);
+
+
+                    switch (goToTwo) {
+                        case 2:
+                            printf("Thanks for visiting Auto Trader Car Dealership.\n\n");
+                            printf(" ####### Feel free to come again and be sure to check our website for upcoming offers and sales on new cars ########\n");
+                            break;
+
+                        case 1:
+                            goto two;
+                            break;
+                        case 3:
+                            goto one;
+                        default:
+                            printf("Invalid Choice\n");
+                            goto two;
+
+
+                    }
+                    break; // break of case three of int dream car
+
+
+
+                case 5:
+                    printf(" ####### LamborghiniF90 #######\n\n");
+                    printf(" * The OnRoad price of this car is %dGBP\n", LamborghiniPrice);
+                    printf(" * The Manufacturing year of Lamborghini is 2021\n");
+                    printf(" * The car has a top speed of 350km/h or 300 m/h\n");
+                    printf(" * The car has a maximum horsepower of 400 BHp.\n");
+                    printf(" * The car has a maximum torque at 350 Nm.\n");
+                    printf(" * The car has a maximum acceleration of 0 - 100 km/h in 2.5 seconds or 0 - 60 m/h in 2.6 seconds");
+                    printf(" * The current stock of this car is %d\n\n\n\n", StockOfLamborghini);
+
+                    printf(" ### To find out more details about other cars press '1' , to exit press '2' or to go to the main menu press '3' ###.\n");
+                    scanf("%d", &goToTwo);
+
+                    switch (goToTwo) {
+                        case 2:
+                            printf("Thanks for visiting Auto Trader Car Dealership.\n\n");
+                            printf(" ####### Feel free to come again and be sure to check our website for upcoming offers and sales on new cars ########\n");
+                            break;
+
+                        case 1:
+                            goto two;
+                            break;
+                        case 3:
+                            goto one;
+                        default:
+                            printf("Invalid Choice\n");
+                            goto two;
+
+
+                    }
+                    break;
+
+                    // default of second switch of car details
+
+                default:
+                    printf("Not a Valid option!\n");
+                    goto two;
+
+
+            }
+            break;
+
+
+            // case 3 0f fist switch to exit
+
+        case 3:
+            printf("Thanks for visiting Auto Trader Car Dealership.\n\n");
+            break;
+
+            // case 4 of first switch for car details
+
+        case 4:
+            printf(" 1- Audi R8\n");
+            printf("price = %dGBP\n", AudiPrice);
+            printf("Current Stock of this Car = %d\n\n", StockOfAudi);
+            printf(" 2- Alfa Romeo\n");
+            printf("Price = %dGBP\n", AlfaPrice);
+            printf("Current stock of this Car %d\n\n", StockOfAlfa);
+            printf(" 3- BmwM5\n");
+            printf("price = %dGBP\n", BmwPrice);
+            printf("Current stock of this car = %d\n\n", StockOfBmw);
+            printf(" 4- Porsche992GT3RS\n");
+            printf("price = %dGBP\n", PorschePrice);
+            printf("Current stock of this car = %d\n\n", StockOfPorsche);
+            printf(" 5- LamborghiniF90\n");
+            printf("price = %dGBP\n", LamborghiniPrice);
+            printf("Current stock of this car = %d\n\n", StockOfLamborghini);
+
+            printf(" ### To go to main menu press '1' or to exit press '2'.\n");
+            scanf("%d", &goToOne);
+
+            switch (goToOne) {
+                case 2:
+                    printf("Thanks for visiting Auto Trader Car Dealership.\n\n");
+                    printf(" ####### Feel free to come again and be sure to check our website for upcoming offers and sales on new cars ########\n");
+                    break;
+
+                case 1:
+                    goto one;
+                    break;
+                default:
+                    printf("Invalid Choice\n");
+                    goto one;
+
+
+            }
+
+            break;
+
+            // the following is for switch one for car selection by users to make a purchase
+
+        case 5:
+        three:
+            printf(" ####### We have some exclusive vehicles that are worth buying #######\n\n");
+            printf(" 1- Audi R8\n");
+            printf(" 2- Alfa Romeo\n");
+            printf(" 3- BmwM5\n");
+            printf(" 4- Porsche992GT3RS\n");
+            printf(" 5- LamborghiniF90\n\n\n");
+
+            printf("Type the number of the car that you want to buy:\n");
+            scanf("%d", &CarSelection);
+
+            switch (CarSelection) {
+
+                case 1:
+                    printf("The car you selected is %s\n", CarNames[CarSelection - 1]);
+                    printf("The Price is %.2f GBP\n", CarPrices[CarSelection - 1]);
+                    printf("Current stock of this car = %d\n\n", CarStock[CarSelection - 1]);
+
+
+                    int GoToThree;
+
+                    printf(" To go back and select another car type '1' . to proceed with your selection of your car type '2' or to go to the main menu press '3'.\n");
+                    scanf("%d", &GoToThree);
+
+                    switch (GoToThree) {
+                        case 1:
+                            goto three;
+                            break;
+                        case 2:
+                            goto four;
+                            break;
+                        case 3:
+                            goto one;
+                        default:
+                            printf("Not a Valid option!\n");
+                            goto three;
+
+
+                    }
+                    break;
+
+
+                case 2:
+                    printf("The car you selected is %s\n", CarNames[CarSelection - 1]);
+                    printf("The Price is %.2f GBP\n", CarPrices[CarSelection - 1]);
+                    printf("Current stock of this car = %d\n\n", CarStock[CarSelection - 1]);
+
+                    printf(" To go back and select another car type '1' . to proceed with your selection of your car type '2' or to go to the main menu press '3'.\n");
+                    scanf("%d", &GoToThree);
+                    switch (GoToThree) {
+                        case 1:
+                            goto three;
+                            break;
+                        case 2:
+                            goto four;
+                            break;
+                        case 3:
+                            goto one;
+                        default:
+                            printf("Not a Valid option\n");
+                            goto three;
+
+
+                    }
+                    break;
+
+                case 3:
+                    printf("The car you selected is %s\n", CarNames[CarSelection - 1]);
+                    printf("The Price is %.2f GBP\n", CarPrices[CarSelection - 1]);
+                    printf("Current stock of this car = %d\n\n", CarStock[CarSelection - 1]);
+
+                    printf(" To go back and select another car type '1' . to proceed with your selection of your car type '2' or to go to the main menu press '3'.\n");
+                    scanf("%d", &GoToThree);
+
+                    switch (GoToThree) {
+                        case 1:
+                            goto three;
+                            break;
+                        case 2:
+                            goto four;
+                            break;
+                        case 3:
+                            goto one;
+                        default:
+                            printf("Not a Valid Option!\n");
+                            goto three;
+
+
+                    }
+                    break;
+
+                case 4:
+                    printf("The car you selected is %s\n", CarNames[CarSelection - 1]);
+                    printf("The Price is %.2f GBP\n", CarPrices[CarSelection - 1]);
+                    printf("Current stock of this car = %d\n\n", CarStock[CarSelection - 1]);
+
+                    printf(" To go back and select another car type '1' . to proceed with your selection of your car type '2' or to go to the main menu press '3'.\n");
+                    scanf("%d", &GoToThree);
+
+                    switch (GoToThree) {
+                        case 1:
+                            goto three;
+                            break;
+                        case 2:
+                            goto four;
+                            break;
+                        case 3:
+                            goto one;
+                        default:
+                            printf("Not a Valid Option!\n");
+                            goto three;
+
+
+                    }
+                    break;
+
+                case 5:
+                    printf("The car you selected is %s\n", CarNames[CarSelection - 1]);
+                    printf("The Price is %.2f GBP\n", CarPrices[CarSelection - 1]);
+                    printf("Current stock of this car = %d\n\n", CarStock[CarSelection - 1]);
+
+                    printf(" To go back and select another car type '1' . to proceed with your selection of your car type '2' or to go to the main menu press '3'.\n");
+                    scanf("%d", &GoToThree);
+
+                    switch (GoToThree) {
+                        case 1:
+                            goto three;
+                            break;
+                        case 2:
+                            goto four;
+                            break;
+                        case 3:
+                            goto one;
+                        default:
+                            printf("Not a Valid Option!\n");
+                            goto three;
+
+
+                    }
+                    break;
+
+
+                default:                    //default of switch one of int booking in case 5 for car booking
+                    printf("Not a valid option!!\n");
+                    goto three;
+
+
+            }
+
+            int Booking;
+        four:
+
+            printf("Type '1' to proceed with your booking or Type '2' to exit......\n\n");
+            scanf("%d", &Booking);
+
+
+            switch (Booking) {
+                case 2:
+                    printf("Thanks for visiting Auto Trader Dealership.\n");
+                    break;
+
+                case 1:
+                five:
+                    printf("To proceed with your booking you have to provide following details:-\n");
+                    printf("Kindly type your name:\n\n");
+                    scanf("%s", &CustomerName);
+                    printf("Hello %s Please note as per Government Guidelines the customer needs to be at least 18 years old to buy a car.\n\n",
+                           CustomerName);
+                    if (age > 18) {
+                        printf("Kindly provide your age:");
+                        scanf("%hd", &Mnumber);
+
+                        int consent;
+                        six:
+                        printf("Type '1' to confirm your details, type '2' to exit or type '3' to fill your details again.\n");
+                        scanf("%d", &consent);
+
+                        if (consent == 1) {
+                            printf(" _______You have a choice between purchasing two alternatives for this car_______");
+                            printf(" ##### payment by cash is accepted.\n");
+                            printf(" ##### Another way you can buy your desired car is by financing\n\n");
+
+                            // as instructed further booking details will be described in coming columns.
+
+                            int LastPart;
+
+                            seven:
+
+                            printf("To select the advised first payment method by paying Cash type '1'.\n");
+                            printf("To select the advised second payment by financing type '2'.\n");
+                            scanf("%d", &LastPart);
+
+                            switch (LastPart) {
+                                case 1:
+
+                                    printf(" #### You have selected to pay by cash for your purchase ####\n");
+                                    printf("Your selected car is %s\n", CarNames[CarSelection - 1]);
+                                    printf("Price for this car will be: %.2f GBP\n\n", CarPrices[CarSelection - 1]);
+
+                                    int Discount;
+
+                                    printf("Press '1' to proceed with your selection or press '2' to exit.\n\n");
+                                    scanf("%d", &Discount);
+
+                                    switch (Discount) {
+                                        case 1:
+                                            printf("Congratulations You have bought %s for .2f\n\n\n",
+                                                   CarNames[CarSelection - 1], CarPrices[CarSelection - 1]);
+                                            printf("Kindly type your experience of buying your car with us.\n");
+                                            printf("Great\n");
+                                            printf("Awful\n");
+                                            scanf("%s", &Feedback);
+
+                                            goto one;
+
+                                            int finalDiscount;
+
+                                        case 2:
+                                        nine:
+                                            printf("If you can, could you please share the reason for you to not buying this car from us?\n\n");
+                                            printf("Type '1' if you think the price of the car is way out of your budget.\n\n");
+                                            printf("Type '2' if you are not comfortable with sharing your decision.\n\n");
+                                            scanf("%d", &finalDiscount);
+
+                                            switch (finalDiscount) {
+                                                case 1:
+                                                    printf("If you think you are unable to afford the car at its original price, don't worry we are providing an additional 10 percentage discount nowadays.\n");
+                                                    printf("After our discount is applied for this car, the price will be %.2f\n\n",
+                                                           CarPrices[CarSelection - 1] / 100 * 90);
+
+                                                    int finalConfirmation;
+                                                    printf("Type '1' to claim your discount and get your hands on your new car.\n");
+                                                    printf("Type '2' for exiting and not to claim your discount.\n");
+                                                    scanf("%d", &finalConfirmation);
+
+                                                    switch (finalConfirmation) {
+                                                        case 1:
+                                                            printf("Congratulations %s on buying your new car.\n",
+                                                                   CustomerName);
+                                                            printf("You have bought the car for %.2f\n\n",
+                                                                   CarPrices[CarSelection - 1] / 100 * 90);
+                                                            printf("Kindly provide a feedback for your experience of buying your car from us.\n");
+                                                            printf("It's Great\n");
+                                                            printf("It's Awful\n");
+                                                            scanf("%s", &Feedback);
+                                                            goto one;
+                                                            break;
+
+
+                                                        case 2:
+                                                            printf("Thanks for visiting Auto Trader Car Dealership.\n\n");
+                                                            printf(" ####### Feel free to come again and be sure to check our website for upcoming offers and sales on new cars ########\n");
+                                                            break;
+
+                                                        default:
+                                                            printf("Invalid choice for the Discount.\n");
+                                                            goto nine;
+
+                                                    }
+                                                    break;
+
+                                                case 2:
+                                                    printf("Thanks for visiting Auto Trader Car Dealership.\n\n");
+                                                    printf(" ####### Feel free to come again and be sure to check our website for upcoming offers and sales on new cars ########\n");
+
+                                                default:
+
+                                                    printf("Invalid Choice for the discount.\n");
+                                                    goto nine;
+
+                                            }
+
+                                    }
+                                    break;
+
+                                case 2:
+                                    printf(" ##### You have selected to pay for your purchase by Finance ##### \n");
+                                    printf("Your selected car is %s\n", CarNames[CarSelection - 1]);
+                                    printf("Price for this car will be %.2f GBP\n\n", CarPrices[CarSelection - 1]);
+                                    printf("What is your preferred term for your Finance to be?\n");
+                                    printf(" #### 24 Months?\n");
+                                    printf(" #### 36 Months?\n");
+
+                                    int FinancePlan;
+
+                                eight:
+
+                                    printf("Type 1 for 24 Month's plan.\n");
+                                    printf("Type 2 for 36 Month's plan.\n\n");
+                                    scanf("%d", &FinancePlan);
+
+                                    switch (FinancePlan) {
+                                        case 1:
+
+                                            printf("Your monthly payment will be %.2f GBP.\n\n",
+                                                   CarPrices[CarSelection - 1] / 24);
+
+                                            break;
+
+                                        case 2:
+                                            printf("Your monthly payment will be %.2f GBP.\n\n",
+                                                   CarPrices[CarSelection - 1] / 36);
+                                            break;
+
+                                        default:
+                                            printf("Invalid Choice for Finance plan confirmation!!\n");
+                                            goto eight;
+
+
+                                    }
+                                    break;
+
+                                default:
+                                    printf("Invalid choice for the payment method!\n");
+                                    goto seven;
+
+
+                            }
+
+                        } else if (consent == 2) {
+
+                            printf("Thanks for visiting Auto Trader Car Dealership.\n\n");
+                            printf(" ####### Feel free to come again and be sure to check our website for upcoming offers and sales on new cars ########\n");
+
+                        } else if (consent == 3) {
+                            goto five;
+                        } else {
+                            printf("Invalid Choice\n");
+                            goto six;
+                        }
+
+                    } else { // is for confirming age whether the user age is below 18
+
+                        printf("We are really sorry to inform that as per rules we are not allowed to sell this car to you.\n");
+                        printf("Because you are under age.\n\n");
+                        printf("Thanks for visiting Auto trader dealership.\n\n");
+                    }
+
+
+                    break;
+
+                default:
+                    printf("Not a valid option!!\n");
+
+            }
+
+
+            break;
+
+        case 6:
+            printf("%s has bought his acr from our showroom and ", CustomerName);
+            printf("Feedback from the customer is ");
+            printf("%s\n\n\n\n", Feedback);
+
+            goto one;
+            break;
+
+        default:
+            printf("Not a valid option!!\n\n");
+            goto one;
+
+    }   }

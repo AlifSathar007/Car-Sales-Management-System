@@ -1,0 +1,3 @@
+C:/Users/ALIF/OneDrive - Anglia Ruskin University/Introduction to Programing/Projects/CarSalesProject/cmake-build-debug/CMakeFiles/CarSalesProject.dir
+C:/Users/ALIF/OneDrive - Anglia Ruskin University/Introduction to Programing/Projects/CarSalesProject/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ALIF/OneDrive - Anglia Ruskin University/Introduction to Programing/Projects/CarSalesProject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
